@@ -1,0 +1,20 @@
+####################################
+### if-else exercises in spanish ###
+####################################
+
+# 1. Creamos una calculadora de impuestos bajo las sigueintes reglas:
+
+# Si el ingreso del ciudadano no era superior a 85,528 pesos, el impuesto era igual al 18% del ingreso menos 556 pesos y 2 centavos (esta fue la llamada exención fiscal ).
+# Si el ingreso era superior a esta cantidad, el impuesto era igual a 14,839 pesos y 2 centavos, más el 32% del excedente sobre 85,528 pesos.
+
+ingreso = float(input("Escriba su ingreso anual:"))
+
+if ingreso <= 85528:
+    if 0.18*ingreso <= 556.2:               #
+        impuesto = 0                        # Líneas para evitar impuestos negativos 
+    elif 0.18*ingreso > 556.2:              #
+        impuesto = 0.18*ingreso - 556.2     #
+elif ingreso > 85528:
+    impuesto = 14839.2 + 0.32*(ingreso - 85528)
+
+print("El impuesto total a pagar es de: ",float(round(impuesto, 00)),"pesos")

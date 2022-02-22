@@ -18,3 +18,4 @@ elif ingreso > 85528:
     impuesto = 14839.2 + 0.32*(ingreso - 85528)
 
 print("El impuesto total a pagar es de: ",float(round(impuesto, 00)),"pesos")
+ 

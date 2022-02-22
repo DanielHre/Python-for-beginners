@@ -1,0 +1,46 @@
+####################################
+### if-elif exercises in spanish ###
+####################################
+
+# 1. Creamos una calculadora de impuestos bajo las sigueintes reglas:
+
+    # Si el ingreso del ciudadano no era superior a 85,528 pesos, el impuesto era igual al 18% del ingreso menos 556 pesos y 2 centavos (esta fue la llamada exención fiscal).
+    # Si el ingreso era superior a esta cantidad, el impuesto era igual a 14,839 pesos y 2 centavos, más el 32% del excedente sobre 85,528 pesos.
+
+ingreso = float(input("Escriba su ingreso anual:"))
+
+if ingreso <= 85528:
+    if 0.18*ingreso <= 556.2:               #
+        impuesto = 0                        # Líneas para evitar impuestos negativos 
+    elif 0.18*ingreso > 556.2:              #
+        impuesto = 0.18*ingreso - 556.2     #
+elif ingreso > 85528:
+    impuesto = 14839.2 + 0.32*(ingreso - 85528)
+
+print("El impuesto total a pagar es de: ",float(round(impuesto, 00)),"pesos")
+ 
+ 
+ 
+# 2. Generamos un verificador de años bisiestos:
+
+    # Si el número del año no es divisible entre cuatro, es un año común.
+    # De lo contrario, si el número del año no es divisible entre 100, es un año bisiesto.
+    # De lo contrario, si el número del año no es divisible entre 400, es un año común.
+    # De lo contrario, es un año bisiesto.
+    # Además de ello, se agregará un verificador si el año en cuestión corresponde al período del calendario gregoriano (1582)
+
+año = int(input("Introduzca un año:"))
+
+if año%4 != 0:
+    tipoaño = "Año común"
+elif año%100 != 0:
+    tipoaño = "Año bisiesto"
+elif año%400 != 0:
+    tipoaño = "Año común"
+else:
+    tipoaño = "Año bisiesto"
+
+if año < 1582:
+    print ("No se encuentra dentro del período del calendario gregoriano")
+else:
+    print (tipoaño)

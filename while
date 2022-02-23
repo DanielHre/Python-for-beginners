@@ -19,3 +19,16 @@ while numero != 0:
 print("Números impares: ", numerosimpares)
 print("Números pares: ", numerospares)
 
+
+# 2. Creamos un juego para adivinar el número secreto
+    #Si el usuario se equivoca, sadrá un mensaje y le regresará al ciclo
+    #Si el usuario acierta, se le felicitará y será librado del ciclo
+    
+númeroSecreto = 777
+numero = int(input("Ingrese el número secreto:"))
+
+while númeroSecreto != numero:
+    print("¡Ja, ja! ¡Estás atrapado en mi ciclo!")
+    numero = int(input("Ingrese el número secreto:"))
+else:
+    print("¡Bien hecho, muggle! Eres libre ahora")

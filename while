@@ -1,0 +1,21 @@
+####################################
+#### while exercises in spanish ####
+####################################
+
+# 1. Creamos una programa que lee una secuencia de númeross ycuenta cuántos números son pares y cuántos impares: el programa termina cuando se ingresa cero
+
+numerosimpares = 0
+numerospares = 0
+
+numero = int(input("Introduce un número o escriba 0 para detener:"))
+
+while numero != 0:
+    if numero % 2 == 1:
+        numerosimpares += 1
+    else:
+        numerospares += 1
+    numero = int(input("Introduce un número o escriba 0 para detener:"))
+
+print("Números impares: ", numerosimpares)
+print("Números pares: ", numerospares)
+
